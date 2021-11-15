@@ -20,4 +20,4 @@ _JSF & PrimeFaces & Spring tutorial - Part 1_
 
 _JSF & PrimeFaces & Spring tutorial - Part 2_
 
-- 
+- How to make intelliSense/Code assist work for JSF? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
