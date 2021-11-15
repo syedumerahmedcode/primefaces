@@ -40,4 +40,4 @@ _JSF & PrimeFaces & Spring tutorial - Part 4: Java EE welcome file_
 
 _JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
 
--  
+- TImestamp: 0:25 
