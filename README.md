@@ -20,4 +20,8 @@ _JSF & PrimeFaces & Spring tutorial - Part 1_
 
 _JSF & PrimeFaces & Spring tutorial - Part 2_
 
-- How to make intelliSense/Code assist work for JSF? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
+- **How to make intelliSense/Code assist work for JSF**(Follow everything defined in part 2 of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
+
+- Right click on Project  ---> Configure ---> Add JSF Capabilities ---> Click on 'Further Configuration Required' link ---> Select Type: Disable Library Configuration ---> Uncheck 'Configure JSF Servlet in deployment descriptor'(Reason: We already did it in web.xml)
+
+- Close all open files ---> Open index.xhtml file with **JBoss Tools HTML Editor**. 
