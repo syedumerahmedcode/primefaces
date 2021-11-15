@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=EPsIiyJdKts&list=PLCaS22Sjc8YQ0bvX0OLwdS6-Fw6ppr
 
 **Notes:**
 
-_JSF & PrimeFaces & Spring tutorial - Part 1_
+_JSF & PrimeFaces & Spring tutorial - Part 1: Hello World JSF _
 
 - In case web.xml is not present in the project, it can be generated via Deployment Descriptor: primefaces ---> Generate Deployment Descriptor Stub.
 
@@ -18,7 +18,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 1_
 
 - The index page is available at: _http://localhost:8080/index.xhtml_
 
-_JSF & PrimeFaces & Spring tutorial - Part 2_
+_JSF & PrimeFaces & Spring tutorial - Part 2: JSF in Eclipse_
 
 - **How to make intelliSense/Code assist work for JSF**(Follow everything defined in part 2 of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
 
@@ -26,7 +26,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 2_
 
 - Close all open files ---> Open index.xhtml file with **JBoss Tools HTML Editor**.
 
-_JSF & PrimeFaces & Spring tutorial - Part 4_
+_JSF & PrimeFaces & Spring tutorial - Part 4: Java EE welcome file_
 
 - How to make the index.xhtml file the default start page when the jetty server starts? Open web.xml file ---> Under <welcome-file-list> tag, only allow
 
@@ -37,4 +37,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 4_
 ```
 
 ---> run the jetty server using 'mvn jetty:run' ---> Open localhost:8080 ---> default page is the index.xhtnl page.
- 
+
+_JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
+
+-  
