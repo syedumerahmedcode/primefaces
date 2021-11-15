@@ -24,4 +24,17 @@ _JSF & PrimeFaces & Spring tutorial - Part 2_
 
 - Right click on Project  ---> Configure ---> Add JSF Capabilities ---> Click on 'Further Configuration Required' link ---> Select Type: Disable Library Configuration ---> Uncheck 'Configure JSF Servlet in deployment descriptor'(Reason: We already did it in web.xml)
 
-- Close all open files ---> Open index.xhtml file with **JBoss Tools HTML Editor**. 
+- Close all open files ---> Open index.xhtml file with **JBoss Tools HTML Editor**.
+
+_JSF & PrimeFaces & Spring tutorial - Part 4_
+
+- How to make the index.xhtml file the default start page when the jetty server starts? Open web.xml file ---> Under <welcome-file-list> tag, only allow
+
+```xml
+
+<welcome-file>index.xhtml</welcome-file>
+
+```
+
+---> run the jetty server using 'mvn jetty:run' ---> Open localhost:8080 ---> default page is the index.xhtnl page.
+ 
