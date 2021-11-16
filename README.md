@@ -75,5 +75,36 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
 }
 ```
 
+- How to used @ManagedProperty annotation in the controller class?
+
+```java
+
+// Using expression language
+	// Here, we are using Spring Bean name. By default, it is the same as the class
+	// name.
+	@ManagedProperty("#{helloSpringService}")
+	private HelloSpringService helloSpringService;
+
+```
+
+Please note that if the setter for the service bean is not present, the following error occurs when running the application.
+**Unable to create managed bean helloController. The following problems were found: - Property helloSpringService for managed bean helloController does not exist. Check that appropriate getter and/or setter methods exist.**
+
+To counter this, please create a setter method as follows:
+
+```java
+
+/**
+	 * This is needed so that JSF runtime can inject the instance in the variable.
+	 * Otherwise, it will throw an exception on running the project.
+	 * 
+	 * @param helloSpringService
+	 */
+	public void setHelloSpringService(HelloSpringService helloSpringService) {
+		this.helloSpringService = helloSpringService;
+	}
+
+```
+
 - 
 
