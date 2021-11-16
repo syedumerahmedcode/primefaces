@@ -52,6 +52,9 @@ _JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
     
 ```
 
+This helps in integration between JSF Runtime and Spring.
+
+
 - The initialization of the spring application is done as follows:
 
 ```java
@@ -105,6 +108,8 @@ To counter this, please create a setter method as follows:
 	}
 
 ```
+
+_JSF & PrimeFaces & Spring tutorial - Part 6: ManagedBean vs Component vs Named_
 
 - 
 
