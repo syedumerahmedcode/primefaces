@@ -52,4 +52,28 @@ _JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
     
 ```
 
+- The initialization of the spring application is done as follows:
+
+```java
+
+// TODO: Please change the class name to something more professional.
+public class MyWebAppInitializer implements WebApplicationInitializer {
+
+	public void onStartup(ServletContext container) throws ServletException {
+		
+		// Create the 'root' spring application context
+		// This is done via registering SpringCOnfiguration class which
+		// contains the annotations: @Configuration and @ComponentScan
+		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
+		rootContext.register(SpringConfiguration.class);
+
+		// Manage the life cycle of the root application context
+		// This is achieved via ContextLoaderListener
+		container.addListener(new ContextLoaderListener(rootContext));
+	}
+
+}
+```
+
 - 
+
