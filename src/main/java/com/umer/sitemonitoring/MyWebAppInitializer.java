@@ -11,11 +11,15 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 public class MyWebAppInitializer implements WebApplicationInitializer {
 
 	public void onStartup(ServletContext container) throws ServletException {
+		
 		// Create the 'root' spring application context
+		// This is done via registering SpringCOnfiguration class which
+		// contains the annotations: @Configuration and @ComponentScan
 		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-		rootContext.register(SpringConfigureation.class);
+		rootContext.register(SpringConfiguration.class);
 
-		// Manage the lifecycle of the root application context
+		// Manage the life cycle of the root application context
+		// This is achieved via ContextLoaderListener
 		container.addListener(new ContextLoaderListener(rootContext));
 	}
 
