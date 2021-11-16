@@ -42,3 +42,14 @@ _JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
 
 - The reason we do not specify version for _spring-web_ artifact Id is because the version number is already defined in dependencyManagement---> <artifactId>spring-framework-bom</artifactId>
 
+- What to configure in faces-config.xml? ---> Added an application ---> el-resolver tag in faces-config.xml file like the following:
+
+```xml
+
+<application>
+    	<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>
+    
+```
+
+- 
