@@ -40,4 +40,5 @@ _JSF & PrimeFaces & Spring tutorial - Part 4: Java EE welcome file_
 
 _JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
 
-- TImestamp: 0:25 
+- The reason we do not specify version for _spring-web_ artifact Id is because the version number is already defined in dependencyManagement---> <artifactId>spring-framework-bom</artifactId>
+
