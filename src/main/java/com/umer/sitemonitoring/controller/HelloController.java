@@ -4,11 +4,13 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.umer.sitemonitoring.service.HelloSpringService;
 
 //@ManagedBean
+@Scope("request")
 @Component
 public class HelloController {
 

@@ -113,3 +113,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 6: ManagedBean vs Component vs Named_
 
 - Using _@ManagedBean_ along with _ManagedProperty("#{helloSpringService}")_ means that beans are managed by JSF Runtime. However, if we use _@Component_ along with _@Autowired_, then beans are managed by Spring framework.
 
+- _ManagedBean_ is created for each request i.e. it has request scope whereas _@Component_ is Singleton.
+
+ - In order to make @Compomnent behave with a request scope, we need to add @Scope("request"). 
+
