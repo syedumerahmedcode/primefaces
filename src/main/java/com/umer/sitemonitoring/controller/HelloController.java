@@ -2,27 +2,21 @@ package com.umer.sitemonitoring.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import com.umer.sitemonitoring.service.HelloSpringService;
 
-//@ManagedBean
-@Scope("request")
-//@Component
-@Named
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@ManagedBean
 public class HelloController {
 
 	// Using expression language
 	// Here, we are using Spring Bean name. By default, it is the same as the class
 	// name.
-//	@ManagedProperty("#{helloSpringService}")
-//	@Autowired
-	@Inject
+	@ManagedProperty("#{helloSpringService}")
 	private HelloSpringService helloSpringService;
 
 	public String showHello() {
@@ -30,13 +24,16 @@ public class HelloController {
 		return helloSpringService.sayHello();
 	}
 
-	/**
-	 * This is needed so that JSF runtime can inject the instance in the variable.
-	 * Otherwise, it will throw an exception on running the project.
-	 * 
-	 * @param helloSpringService
-	 */
-	public void setHelloSpringService(HelloSpringService helloSpringService) {
-		this.helloSpringService = helloSpringService;
-	}
+//	/**
+//	 * This is needed so that JSF runtime can inject the instance in the variable.
+//	 * Otherwise, it will throw an exception on running the project. 
+//	 *
+//   * We are using lombok to generate this.
+//	 * 
+//	 * 
+//	 * @param helloSpringService
+//	 */
+//	public void setHelloSpringService(HelloSpringService helloSpringService) {
+//		this.helloSpringService = helloSpringService;
+//	}
 }
