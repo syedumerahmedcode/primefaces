@@ -2,6 +2,8 @@ package com.umer.sitemonitoring.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -11,14 +13,16 @@ import com.umer.sitemonitoring.service.HelloSpringService;
 
 //@ManagedBean
 @Scope("request")
-@Component
+//@Component
+@Named
 public class HelloController {
 
 	// Using expression language
 	// Here, we are using Spring Bean name. By default, it is the same as the class
 	// name.
 //	@ManagedProperty("#{helloSpringService}")
-	@Autowired
+//	@Autowired
+	@Inject
 	private HelloSpringService helloSpringService;
 
 	public String showHello() {
