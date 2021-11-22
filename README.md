@@ -118,5 +118,67 @@ _JSF & PrimeFaces & Spring tutorial - Part 6: ManagedBean vs Component vs Named_
  - In order to make @Compomnent behave with a request scope, we need to add @Scope("request"). 
  
  - If we want to achieve the same result in CDI context, then we need @Named and @Inject.
- 1:16
+ 
+ **Initialization of Beans:**
+ 
+ **JSF Runtime:**
+ 
+ ```java
+ 
+@ManagedBean
+
+public class HelloController {
+
+	// Using expression language
+	// Here, we are using Spring Bean name. By default, it is the same as the class
+	// name.
+//	@ManagedProperty("#{helloSpringService}")
+
+	private HelloSpringService helloSpringService;
+
+	public String showHello() {
+		// return "Hello from the Managed bean";
+		return helloSpringService.sayHello();
+	}
+
+	/**
+	 * This is needed so that JSF runtime can inject the instance in the variable.
+	 * Otherwise, it will throw an exception on running the project.
+	 * 
+	 * @param helloSpringService
+	 */
+	public void setHelloSpringService(HelloSpringService helloSpringService) {
+		this.helloSpringService = helloSpringService;
+	}
+ 
+```
+
+**Spring context:**
+
+```java
+
+@Component
+public class HelloController {
+
+	@Autowired
+	private HelloSpringService helloSpringService;
+	
+	// further lines of code
+
+```
+
+**CDI context:**
+
+```java
+
+@Named
+public class HelloController {
+
+	@Inject
+	private HelloSpringService helloSpringService;
+	
+	// further lines of code
+
+``` 
+
 
