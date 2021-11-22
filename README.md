@@ -116,5 +116,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 6: ManagedBean vs Component vs Named_
 - _ManagedBean_ is created for each request i.e. it has request scope whereas _@Component_ is Singleton.
 
  - In order to make @Compomnent behave with a request scope, we need to add @Scope("request"). 
+ 
+ - If we want to achieve the same result in CDI context, then we need @Named and @Inject.
  1:16
 
