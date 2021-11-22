@@ -111,5 +111,5 @@ To counter this, please create a setter method as follows:
 
 _JSF & PrimeFaces & Spring tutorial - Part 6: ManagedBean vs Component vs Named_
 
-- 
+- Using _@ManagedBean_ along with _ManagedProperty("#{helloSpringService}")_ means that beans are managed by JSF Runtime. However, if we use _@Component_ along with _@Autowired_, then beans are managed by Spring framework.
 
