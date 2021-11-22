@@ -182,7 +182,7 @@ public class HelloController {
 ```
 
 
-_JSF & PrimeFaces & Spring tutorial - Part 7: Project Lombok_
+_JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
 
 - 
 
