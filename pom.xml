@@ -8,12 +8,13 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- <maven.compiler.source>1.8</maven.compiler.source> -->
+		<!-- <maven.compiler.target>1.8</maven.compiler.target> -->
 	</properties>
 
 
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
@@ -36,11 +37,13 @@
 		</dependency>
 		
 		
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.14.8</version>
-		</dependency>
+			<version>1.18.12</version>
+			<scope>provided</scope>
+		</dependency>		
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -87,7 +90,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

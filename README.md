@@ -184,5 +184,5 @@ public class HelloController {
 
 _JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
 
-- 
+- https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> this fixed the compilation problem with lombok.
 
