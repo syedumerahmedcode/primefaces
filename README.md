@@ -188,3 +188,5 @@ _JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
 
 - TODO: Describe the purpose of _hikaricp_ and _hsqldb_ dependencies. 
 
+- Service is created during application start-up since it is a singleton.
+
