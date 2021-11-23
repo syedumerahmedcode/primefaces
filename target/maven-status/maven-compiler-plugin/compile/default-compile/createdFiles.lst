@@ -1,3 +1,4 @@
+com/umer/sitemonitoring/entity/Check.class
 com/umer/sitemonitoring/service/HelloSpringService.class
 com/umer/sitemonitoring/SpringConfiguration.class
 com/umer/sitemonitoring/controller/HelloController.class
