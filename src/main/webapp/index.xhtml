@@ -7,6 +7,21 @@
 <h:body>
 The Managed Bean says: 
 #{helloController.showHello()}
+<p />
+<p />
+
+<p:dataTable value="#{checkListController.checks}" var="check">
+	<p:column headerText="name">
+		#{check.name}
+	</p:column>
+	<p:column headerText="url">
+		<a href="#{check.url}" target="_blank">
+			#{check.url}
+		</a>
+	</p:column>
+
+
+</p:dataTable>
 </h:body>
 
 </html>
