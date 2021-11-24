@@ -192,3 +192,5 @@ _JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
 
 - https://stackoverflow.com/questions/53690136/the-import-javax-annotation-postconstruct-cannot-be-resolved   ---> this explains the problem with @PostConstrcut annotation not being recognized.
 
+- https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory ---> How to avoid hibernate problem with the creation of entitymanagerfactory
+
