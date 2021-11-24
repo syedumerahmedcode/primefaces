@@ -194,3 +194,24 @@ _JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
 
 - https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory ---> How to avoid hibernate problem with the creation of entitymanagerfactory
 
+_JSF & PrimeFaces & Spring tutorial - Part 10: PrimeFaces DataTable_
+
+- Consider the following code:
+
+```xhtml
+
+<p:dataTable value="#{checkListController.checks}" var="check">
+	<p:column headerText="name">
+		#{check.name}
+	</p:column>
+	<p:column headerText="url">
+		<a href="#{check.url}" target="_blank">
+			#{check.url}
+		</a>
+	</p:column>
+</p:dataTable>
+```
+- Here _p:dataTable_ creates a JSF type datatable. It is populated via _#{checkListController.checks}_ which is iterated over and the individual value is stored in _var="check"_. 
+
+- _p:column_ represents a JSF style column with the name of the column represented via _headerText="name"_. There is no special tag used for displaying row in the example.
+
