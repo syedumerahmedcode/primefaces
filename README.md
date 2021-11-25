@@ -270,8 +270,9 @@ Additionally, one must add it as a value of update attribute in the save button 
 <p:messages id="messages"/>
 
 ```
-**Attention:** The message**s** tag name must be exact. Incase the 's' at the end is missing, one would get a _NullPointerException_ but it will not say that the component name is incorrect. 
+**Attention:** The message**s** tag name must be exact. In case the 's' at the end is missing, one would get a _NullPointerException_ but it will not say that the component name is incorrect. 
 
+- Using **<p:growl />** provides a much nicer save message.
 
 
 **TODO Tasks:**

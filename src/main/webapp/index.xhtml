@@ -10,7 +10,9 @@ The Managed Bean says:
 <p />
 <p />
 
-<p:messages id="messages"/>
+<!-- <p:messages id="messages"/> -->
+<p:growl id="messages"/>
+
 
 <p:dataTable value="#{checkListController.checks}" var="check" id="checkTable">
 	<p:column headerText="name"> 
