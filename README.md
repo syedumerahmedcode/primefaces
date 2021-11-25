@@ -250,7 +250,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 
 _JSF & PrimeFaces & Spring tutorial - Part 13: PrimeFaces update_
 
-- 
+- In order to make data from text box disappear after save button is clickwed, add _update="checkForm"_ in save button. **Attention:** This must match the **form id**.
 
 
 
