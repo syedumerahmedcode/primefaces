@@ -248,3 +248,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 
 - We use **javax.faces.bean.ViewScoped** as import class as it works together with ManagedBean. _javax.faces.view_ works with CDI context which we are not using.  
 
+_JSF & PrimeFaces & Spring tutorial - Part 13: PrimeFaces update_
+
+- 
+

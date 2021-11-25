@@ -39,7 +39,7 @@ public class CheckListController implements Serializable {
 		/**
 		 * Why do we need this? Because saving something creates an Id and all
 		 * subsequent calls to the name will do an update and before a select to see if
-		 * something changed.. in order ot have a new row inserted each time a save is
+		 * something changed. In order to have a new row inserted each time a save is
 		 * called, the check object must be initialized again.
 		 */
 		check = new Check();
