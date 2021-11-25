@@ -215,3 +215,11 @@ _JSF & PrimeFaces & Spring tutorial - Part 10: PrimeFaces DataTable_
 
 - _p:column_ represents a JSF style column with the name of the column represented via _headerText="name"_. There is no special tag used for displaying row in the example.
 
+
+_JSF & PrimeFaces & Spring tutorial - Part 11: JSF Form tag_
+
+- _<h:form>_ generates HTML form.
+
+- _<p:panelGrid columns="2">_ generates a HTML table with two columns.
+
+- _<h:commandButton action="" value="save" />_, this generates a save button.  
