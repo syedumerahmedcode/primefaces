@@ -76,6 +76,7 @@
 			<artifactId>primefaces</artifactId>
 			<version>5.1</version>
 		</dependency>
+		<!-- javax.faces gives me Mojara Runtime. -->
 		<dependency>
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.faces</artifactId>
