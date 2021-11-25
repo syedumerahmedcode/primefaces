@@ -235,3 +235,8 @@ _JSF & PrimeFaces & Spring tutorial - Part 11: JSF Form tag_
 - On the back-end side:
 - A **check** object is created. **Attention:** By default, all JSF objects are initialized with null hence, we must call new operator to initialize the object.
 - We call the **save** method in **Controller** ---> this will call the **save()** method in **Service** ---> this uses **repository** to **save** the element.
+
+_JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
+
+- [JSF Bean Scope & Description](https://www.tutorialspoint.com/jsf/jsf_managed_beans.htm)
+- 
