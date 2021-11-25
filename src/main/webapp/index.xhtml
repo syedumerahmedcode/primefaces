@@ -21,7 +21,7 @@ The Managed Bean says:
 	</p:column>
 </p:dataTable>
 
-<h:form>
+<h:form id="checkForm">
 	<p:panelGrid columns="2">
 		name:
 		<p:inputText value="#{checkListController.check.name}"/>
@@ -29,7 +29,7 @@ The Managed Bean says:
 		url:
 		<p:inputText value="#{checkListController.check.url}"/>		
 	</p:panelGrid>
-	<h:commandButton value="save" action="#{checkListController.save()}"/>
+	<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm"/>
 </h:form>
 
 
