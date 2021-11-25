@@ -251,6 +251,8 @@ _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 _JSF & PrimeFaces & Spring tutorial - Part 13: PrimeFaces update_
 
 - In order to make data from text box disappear after save button is clickwed, add _update="checkForm"_ in save button. **Attention:** This must match the **form id**.
+- In order to dynamically update the data table, we need to add _update="checkForm, :checkTable"_ in save button. Here, we add **,** to indicate that this is an additional component and **:** since this component is outside the form. ---> On the back-end side, in CheckListController class, we add **checks = checkService.findAll();** in **save()** method so that the data is reloaded not only at system start-up but also after save button is pressed. 
+
 
 
 
