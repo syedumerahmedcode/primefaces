@@ -222,4 +222,16 @@ _JSF & PrimeFaces & Spring tutorial - Part 11: JSF Form tag_
 
 - _<p:panelGrid columns="2">_ generates a HTML table with two columns.
 
-- _<h:commandButton action="" value="save" />_, this generates a save button.  
+- _<h:commandButton action="" value="save" />_, this generates a save button.
+
+**How to bind the JSF front-end with the Controller Backend:**
+
+- On the front-end side:
+- Input for **url** are captured via _value="#{checkListController.check.url}"_ in input field.
+- upon clicking **save** button via _<h:commandButton value="save" action="#{checkListController.save()}"/>_, the request is send to the back-end.
+- **Attention:**  By default, the form is not cleared automatically when save button is clicked. Why? Because, out of the box, the prime faces command button component sends the request to the server using **Ajax Post**. Hence, when we refresh the page, we will see the current state of the data from the database. 
+
+
+- On the back-end side:
+- A **check** object is created. **Attention:** By default, all JSF objects are initialized with null hence, we must call new operator to initialize the object.
+- We call the **save** method in **Controller** ---> this will call the **save()** method in **Service** ---> this uses **repository** to **save** the element.

@@ -22,9 +22,15 @@ public class CheckListController {
 	
 	private List<Check> checks;
 	
+	private Check check=new Check();
+	
 	@PostConstruct
 	public void loadChecks() {
 		checks=checkService.findAll();
+	}
+	
+	public void save() {
+		checkService.save(check);
 	}
 
 }

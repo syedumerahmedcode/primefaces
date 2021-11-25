@@ -24,12 +24,12 @@ The Managed Bean says:
 <h:form>
 	<p:panelGrid columns="2">
 		name:
-		<p:inputText />
+		<p:inputText value="#{checkListController.check.name}"/>
 		
 		url:
-		<p:inputText />		
+		<p:inputText value="#{checkListController.check.url}"/>		
 	</p:panelGrid>
-	<h:commandButton value="save" />
+	<h:commandButton value="save" action="#{checkListController.save()}"/>
 </h:form>
 
 
