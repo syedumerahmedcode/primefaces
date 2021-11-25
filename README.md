@@ -272,7 +272,11 @@ Additionally, one must add it as a value of update attribute in the save button 
 ```
 **Attention:** The message**s** tag name must be exact. In case the 's' at the end is missing, one would get a _NullPointerException_ but it will not say that the component name is incorrect. 
 
-- Using **<p:growl />** provides a much nicer save message.
+- Using **<p:growl />** (Of Mac style based) provides a much nicer save message.
+
+_JSF & PrimeFaces & Spring tutorial - Part 15: JSF Validation With Hibernate Validator_
+
+- 
 
 
 **TODO Tasks:**
