@@ -242,5 +242,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 
 - Why is @managedBean inefficient? Because @ManagedBean is created again and again on every request to the server. Hence, even when saving a new entry into the database, a select command on the database is executed first.
 
-- 
+- @ApplicationScoped: Singleton.
+- @SessionScoped: A bean with session scope is created per user.
+- @ViewScoped: It is created when the user access the page and it is still in memory when the page calls using Ajax to server, It is only destroyed when the user leaves the page.
 
