@@ -43,6 +43,7 @@ public class CheckListController implements Serializable {
 		 * called, the check object must be initialized again.
 		 */
 		check = new Check();
+		checks = checkService.findAll();
 	}
 
 }
