@@ -239,4 +239,8 @@ _JSF & PrimeFaces & Spring tutorial - Part 11: JSF Form tag_
 _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 
 - [JSF Bean Scope & Description](https://www.tutorialspoint.com/jsf/jsf_managed_beans.htm)
+
+- Why is @managedBean inefficient? Because @ManagedBean is created again and again on every request to the server. Hence, even when saving a new entry into the database, a select command on the database is executed first.
+
 - 
+
