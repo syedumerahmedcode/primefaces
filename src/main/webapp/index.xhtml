@@ -10,6 +10,8 @@ The Managed Bean says:
 <p />
 <p />
 
+<p:messages id="messages"/>
+
 <p:dataTable value="#{checkListController.checks}" var="check" id="checkTable">
 	<p:column headerText="name"> 
 		#{check.name}
@@ -29,7 +31,7 @@ The Managed Bean says:
 		url:
 		<p:inputText value="#{checkListController.check.url}"/>		
 	</p:panelGrid>
-	<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm, :checkTable"/>
+	<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm, :checkTable, :messages"/>
 </h:form>
 
 

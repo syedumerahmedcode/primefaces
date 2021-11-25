@@ -255,6 +255,24 @@ _JSF & PrimeFaces & Spring tutorial - Part 13: PrimeFaces update_
 
 _JSF & PrimeFaces & Spring tutorial - Part 14: JSF messages & growl_
 
+- In order to display the success message on save, we added the following line in **CheckListCokntroller.save()** method.
+
+```java
+
+FacesContext.getCurrentInstance().addMessage(null,
+				new FacesMessage(FacesMessage.SEVERITY_INFO, "Check saved.", null));
+```
+Additionally, one must add it as a value of update attribute in the save button with a **:** since the component is outside of the HTML form.
+- On the front-end side, add
+
+```xml
+
+<p:messages id="messages"/>
+
+```
+**Attention:** The message**s** tag name must be exact. Incase the 's' at the end is missing, one would get a _NullPointerException_ but it will not say that the component name is incorrect. 
+
+
 
 **TODO Tasks:**
 

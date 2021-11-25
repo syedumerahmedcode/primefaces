@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 import com.umer.sitemonitoring.entity.Check;
 import com.umer.sitemonitoring.service.CheckService;
@@ -44,6 +46,8 @@ public class CheckListController implements Serializable {
 		 */
 		check = new Check();
 		checks = checkService.findAll();
+		FacesContext.getCurrentInstance().addMessage(null,
+				new FacesMessage(FacesMessage.SEVERITY_INFO, "Check saved.", null));
 	}
 
 }
