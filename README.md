@@ -246,4 +246,5 @@ _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 - @SessionScoped: A bean with session scope is created per user.
 - @ViewScoped: It is created when the user access the page and it is still in memory when the page calls using Ajax to server, It is only destroyed when the user leaves the page. Why does the class implements Serializable? Because the information is stored in a Session and hence to have it from one request to the next, it must implement serializable.
 
+- We use **javax.faces.bean.ViewScoped** as import class as it works together with ManagedBean. _javax.faces.view_ works with CDI context which we are not using.  
 
