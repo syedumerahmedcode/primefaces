@@ -252,3 +252,12 @@ _JSF & PrimeFaces & Spring tutorial - Part 13: PrimeFaces update_
 
 - 
 
+
+
+**TODO Tasks:**
+
+- Code refactoring.
+- move all version number to properties section in pom file.
+- Use the latest version of all dependencies in pom file.
+  
+
