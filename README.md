@@ -280,7 +280,15 @@ _JSF & PrimeFaces & Spring tutorial - Part 15: JSF Validation With Hibernate Val
 
 _JSF & PrimeFaces & Spring tutorial - Part 16: complete JSF CRUD application_
 
-- 
+- For editing, we created a separate column which contains a command button:
+ 
+```xml
+
+<p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm"/>
+
+```
+
+Here, _action="#{checkListController.setCheck(check)}"_ allows us to fetch the current check value from the Controller class whereas _update=":checkForm"_ loads the current record in edit form. 
 
 
 
