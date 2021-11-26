@@ -288,8 +288,17 @@ _JSF & PrimeFaces & Spring tutorial - Part 16: complete JSF CRUD application_
 
 ```
 
-Here, _action="#{checkListController.setCheck(check)}"_ allows us to fetch the current check value from the Controller class whereas _update=":checkForm"_ loads the current record in edit form. 
+Here, _action="#{checkListController.setCheck(check)}"_ allows us to fetch the current check value from the Controller class whereas _update=":checkForm"_ loads the current record in edit form.
 
+- For removing a record, we created the following command button:
+
+```xml
+
+<p:commandButton value="remove" action="#{checkListController.remove(check)}" update=":checkTable, :messages"/>
+
+```
+
+Here: _action="#{checkListController.remove(check)}"_ calls the remove() method in check controller whereas in _update=":checkTable, :messages"_ since we want to update the data table, we pass _checkTable_ as argument and in order to display a 'checks removed' message, we also pass _:messages_ to update attribute.
 
 
 **TODO Tasks:**
