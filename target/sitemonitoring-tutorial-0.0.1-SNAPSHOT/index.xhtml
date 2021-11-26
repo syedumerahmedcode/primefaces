@@ -7,6 +7,36 @@
 <h:body>
 The Managed Bean says: 
 #{helloController.showHello()}
+<p />
+<p />
+
+<!-- <p:messages id="messages"/> -->
+<p:growl id="messages"/>
+
+
+<p:dataTable value="#{checkListController.checks}" var="check" id="checkTable">
+	<p:column headerText="name"> 
+		#{check.name}
+	</p:column>
+	<p:column headerText="url">
+		<a href="#{check.url}" target="_blank">
+			#{check.url}
+		</a>
+	</p:column>
+</p:dataTable>
+
+<h:form id="checkForm">
+	<p:panelGrid columns="2">
+		name:
+		<p:inputText value="#{checkListController.check.name}"/>
+		
+		url:
+		<p:inputText value="#{checkListController.check.url}"/>		
+	</p:panelGrid>
+	<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm, :checkTable, :messages"/>
+</h:form>
+
+
 </h:body>
 
 </html>

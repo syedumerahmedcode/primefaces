@@ -14,6 +14,7 @@ The Managed Bean says:
 <p:growl id="messages"/>
 
 
+
 <p:dataTable value="#{checkListController.checks}" var="check" id="checkTable">
 	<p:column headerText="name"> 
 		#{check.name}
@@ -26,6 +27,7 @@ The Managed Bean says:
 </p:dataTable>
 
 <h:form id="checkForm">
+	<p:focus />
 	<p:panelGrid columns="2">
 		name:
 		<p:inputText value="#{checkListController.check.name}"/>
