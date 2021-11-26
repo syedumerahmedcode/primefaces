@@ -24,6 +24,12 @@ The Managed Bean says:
 			#{check.url}
 		</a>
 	</p:column>
+	<p:column headerText="operations">
+		<h:form>
+			<p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm"/>
+		</h:form>
+		
+	</p:column>
 </p:dataTable>
 
 <h:form id="checkForm">
