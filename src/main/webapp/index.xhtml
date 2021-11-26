@@ -27,6 +27,7 @@ The Managed Bean says:
 	<p:column headerText="operations">
 		<h:form>
 			<p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm"/>
+			<p:commandButton value="remove" action="#{checkListController.remove(check)}" update=":checkTable, :messages"/>
 		</h:form>
 		
 	</p:column>
