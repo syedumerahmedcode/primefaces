@@ -300,6 +300,10 @@ Here, _action="#{checkListController.setCheck(check)}"_ allows us to fetch the c
 
 Here: _action="#{checkListController.remove(check)}"_ calls the remove() method in check controller whereas in _update=":checkTable, :messages"_ since we want to update the data table, we pass _checkTable_ as argument and in order to display a 'checks removed' message, we also pass _:messages_ to update attribute.
 
+_JSF & PrimeFaces & Spring tutorial - Part 17: PrimeFaces Confirm Dialog_
+
+- 
+
 
 **TODO Tasks:**
 
