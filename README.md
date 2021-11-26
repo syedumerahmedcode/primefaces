@@ -302,7 +302,26 @@ Here: _action="#{checkListController.remove(check)}"_ calls the remove() method 
 
 _JSF & PrimeFaces & Spring tutorial - Part 17: PrimeFaces Confirm Dialog_
 
-- 
+- For confirm dialog, we have two parts:
+
+```xml
+
+<p:confirm header="Confirmation" message="Do you want to delete this record?" icon="pi pi-info-circle"/>
+
+```
+This will create the dialog box.
+
+Second part is:
+
+```xml
+<h:form>
+	<p:confirmDialog global="true" responsive="true" width="350">
+        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no ui-button-flat"/>
+        <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" />
+    </p:confirmDialog>
+</h:form>
+```
+This creates the options of _yes_ or _no_. **Attention:** This part must be written inside a HTML form. 
 
 
 **TODO Tasks:**
