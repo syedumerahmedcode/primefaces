@@ -276,7 +276,12 @@ Additionally, one must add it as a value of update attribute in the save button 
 
 _JSF & PrimeFaces & Spring tutorial - Part 15: JSF Validation With Hibernate Validator_
 
+- Using standard Hibernate validator for checking fields here. One can also think of using javax.validations.
+
+_JSF & PrimeFaces & Spring tutorial - Part 16: complete JSF CRUD application_
+
 - 
+
 
 
 **TODO Tasks:**
