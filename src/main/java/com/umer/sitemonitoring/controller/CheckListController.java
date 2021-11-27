@@ -58,7 +58,7 @@ public class CheckListController implements Serializable {
 
 	private void addNotificationMessage(String messageToDisplay) {
 		FacesContext.getCurrentInstance().addMessage(null,
-				new FacesMessage(FacesMessage.SEVERITY_INFO, CHECK_REMOVED, null));
+				new FacesMessage(FacesMessage.SEVERITY_INFO, messageToDisplay, null));
 	}
 
 	private void getAllEntries() {
