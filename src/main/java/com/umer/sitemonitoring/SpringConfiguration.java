@@ -22,6 +22,10 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableJpaRepositories
 public class SpringConfiguration {
 	
+	private static final String HSQL_MEM_PASSWORD = "";
+	private static final String HSQL_MEM_USERNAME = "sa";
+	private static final String HSQLDB_MEM_JDBC_URL = "jdbc:hsqldb:mem:test";
+
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean entityManagerFactory=new LocalContainerEntityManagerFactoryBean();
@@ -48,9 +52,9 @@ public class SpringConfiguration {
 	@Bean
 	public DataSource dataSource() {
 		HikariDataSource dataSource = new HikariDataSource();
-		dataSource.setJdbcUrl("jdbc:hsqldb:mem:test");
-		dataSource.setUsername("sa");
-		dataSource.setPassword("");
+		dataSource.setJdbcUrl(HSQLDB_MEM_JDBC_URL);
+		dataSource.setUsername(HSQL_MEM_USERNAME);
+		dataSource.setPassword(HSQL_MEM_PASSWORD);
 		return dataSource;
 	}
 
