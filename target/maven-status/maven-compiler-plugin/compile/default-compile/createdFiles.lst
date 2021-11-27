@@ -1,6 +1,5 @@
 com/umer/sitemonitoring/service/HelloSpringService.class
 com/umer/sitemonitoring/controller/HelloController.class
-com/umer/sitemonitoring/MyWebAppInitializer.class
 com/umer/sitemonitoring/repository/CheckRepository.class
 com/umer/sitemonitoring/entity/Check.class
 com/umer/sitemonitoring/service/CheckService.class

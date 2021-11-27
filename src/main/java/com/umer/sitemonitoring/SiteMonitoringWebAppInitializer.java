@@ -7,13 +7,13 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
-// TODO: Please change the class name to something more professional.
+
 /**
  * It bootstraps Spring in our web application
  * @author umer
  *
  */
-public class MyWebAppInitializer implements WebApplicationInitializer {
+public class SiteMonitoringWebAppInitializer implements WebApplicationInitializer {
 
 	public void onStartup(ServletContext container) throws ServletException {
 		
