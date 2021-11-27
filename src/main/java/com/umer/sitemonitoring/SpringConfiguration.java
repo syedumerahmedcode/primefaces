@@ -21,7 +21,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableTransactionManagement
 @EnableJpaRepositories
 public class SpringConfiguration {
-	
+
 	private static final String PACKAGE_TO_SCAN_FOR_ENTITY = "com.umer.sitemonitoring.entity";
 	private static final String HSQL_MEM_PASSWORD = "";
 	private static final String HSQL_MEM_USERNAME = "sa";
@@ -29,25 +29,20 @@ public class SpringConfiguration {
 
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
-		LocalContainerEntityManagerFactoryBean entityManagerFactory=new LocalContainerEntityManagerFactoryBean();
+		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource);
-		SiteMonitoringJpaProperties monitoringJpaPropertiesjpaProperties=new SiteMonitoringJpaProperties();
-		Properties jpaProperties = monitoringJpaPropertiesjpaProperties.createJpaProperties();
+		Properties jpaProperties = fetchJpaProperties();
 		entityManagerFactory.setJpaProperties(jpaProperties);
 		entityManagerFactory.setPackagesToScan(PACKAGE_TO_SCAN_FOR_ENTITY);
 		entityManagerFactory.setPersistenceProvider(new HibernatePersistenceProvider());
 		return entityManagerFactory;
-		
 	}
 
-//	private Properties createJpaProperties() {
-//		Properties jpaProperties=new Properties();
-//		jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
-//		jpaProperties.put("hibernate.show_sql", "true");
-//		jpaProperties.put("javax.persistence.validation.mode", "none");
-//		//jpaProperties.put("hibernate.format_sql", "true");
-//		return jpaProperties;
-//	}
+	private Properties fetchJpaProperties() {
+		SiteMonitoringJpaProperties monitoringJpaPropertiesjpaProperties = new SiteMonitoringJpaProperties();
+		Properties jpaProperties = monitoringJpaPropertiesjpaProperties.createJpaProperties();
+		return jpaProperties;
+	}
 
 	@Bean
 	public JpaTransactionManager transactionManager(DataSource dataSource, EntityManagerFactory entityManagerFactory) {
