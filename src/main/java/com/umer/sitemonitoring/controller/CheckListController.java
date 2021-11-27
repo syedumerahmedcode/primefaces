@@ -33,37 +33,39 @@ public class CheckListController implements Serializable {
 
 	@PostConstruct
 	public void loadChecks() {
-		checks = checkService.findAll();
+		getAllEntries();
 	}
 
 	public void save() {
 		checkService.save(check);
-		/**
-		 * Why do we need this? Because saving something creates an Id and all
-		 * subsequent calls to the name will do an update and before a select to see if
-		 * something changed. In order to have a new row inserted each time a save is
-		 * called, the check object must be initialized again.
-		 */
-		check = new Check();
-		checks = checkService.findAll();
+		clearChecks();
+		getAllEntries();
 		FacesContext.getCurrentInstance().addMessage(null,
 				new FacesMessage(FacesMessage.SEVERITY_INFO, "Check saved.", null));
 	}
-	
+
+	public void clear() {
+		clearChecks();
+	}
+
 	public void remove(Check check) {
 		checkService.remove(check);
-		checks = checkService.findAll();
+		getAllEntries();
 		FacesContext.getCurrentInstance().addMessage(null,
 				new FacesMessage(FacesMessage.SEVERITY_INFO, "Check removed.", null));
 	}
-	
-	public void clear() {
-		/**
-		 * Why do we need this? Because saving something creates an Id and all
-		 * subsequent calls to the name will do an update and before a select to see if
-		 * something changed. In order to have a new row inserted each time a save is
-		 * called, the check object must be initialized again.
-		 */
+
+	private void getAllEntries() {
+		checks = checkService.findAll();
+	}
+
+	/**
+	 * Why do we need this? Because saving something creates an Id and all
+	 * subsequent calls to the name will do an update and before a select to see if
+	 * something changed. In order to have a new row inserted each time a save is
+	 * called, the check object must be initialized again.
+	 */
+	private void clearChecks() {
 		check = new Check();
 	}
 
