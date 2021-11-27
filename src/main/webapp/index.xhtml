@@ -37,7 +37,9 @@ The Managed Bean says:
 
 <br />
 <h:form>
-	<p:commandButton value="add check" oncomplete="PF('checkDialog').show()" />
+	<p:commandButton value="add check" action="#{checkListController.clear()}" 
+					 update=":checkForm" 
+					 oncomplete="PF('checkDialog').show()" />
 </h:form>
 
 <p:dialog widgetVar="checkDialog" closeOnEscape="true" modal="true" header="check">
