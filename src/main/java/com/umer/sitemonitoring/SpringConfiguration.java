@@ -22,10 +22,11 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableJpaRepositories
 public class SpringConfiguration {
 
-	private static final String PACKAGE_TO_SCAN_FOR_ENTITY = "com.umer.sitemonitoring.entity";
-	private static final String HSQL_MEM_PASSWORD = "";
-	private static final String HSQL_MEM_USERNAME = "sa";
 	private static final String HSQLDB_MEM_JDBC_URL = "jdbc:hsqldb:mem:test";
+	private static final String HSQL_MEM_USERNAME = "sa";
+	private static final String HSQL_MEM_PASSWORD = "";
+
+	private static final String PACKAGE_TO_SCAN_FOR_ENTITY = "com.umer.sitemonitoring.entity";
 
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
