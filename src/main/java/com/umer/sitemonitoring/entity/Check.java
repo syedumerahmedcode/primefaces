@@ -15,15 +15,19 @@ import lombok.Setter;
 @Setter
 public class Check {
 
+	private static final String NAME_CANNOT_BE_EMPTY = "Name cannot be empty.";
+	private static final String URL_CANNOT_BE_EMPTY = "URL cannot be empty.";
+	private static final String INVALID_URL = "Invalid url.";
+
 	@Id
 	@GeneratedValue
 	private int id;
 
-	@Size(min = 1, message = "Name cannot be empty.")
+	@Size(min = 1, message = NAME_CANNOT_BE_EMPTY)
 	private String name;
 
-	@Size(min = 1, message = "URL cannot be empty.")
-	@URL(message = "Invalid url.")
+	@Size(min = 1, message = URL_CANNOT_BE_EMPTY)
+	@URL(message = INVALID_URL)
 	private String url;
 
 }
