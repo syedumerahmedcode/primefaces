@@ -31,7 +31,8 @@ public class SpringConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean entityManagerFactory=new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource);
-		Properties jpaProperties = createJpaProperties();
+		SiteMonitoringJpaProperties monitoringJpaPropertiesjpaProperties=new SiteMonitoringJpaProperties();
+		Properties jpaProperties = monitoringJpaPropertiesjpaProperties.createJpaProperties();
 		entityManagerFactory.setJpaProperties(jpaProperties);
 		entityManagerFactory.setPackagesToScan(PACKAGE_TO_SCAN_FOR_ENTITY);
 		entityManagerFactory.setPersistenceProvider(new HibernatePersistenceProvider());
@@ -39,14 +40,14 @@ public class SpringConfiguration {
 		
 	}
 
-	private Properties createJpaProperties() {
-		Properties jpaProperties=new Properties();
-		jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
-		jpaProperties.put("hibernate.show_sql", "true");
-		jpaProperties.put("javax.persistence.validation.mode", "none");
-		//jpaProperties.put("hibernate.format_sql", "true");
-		return jpaProperties;
-	}
+//	private Properties createJpaProperties() {
+//		Properties jpaProperties=new Properties();
+//		jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
+//		jpaProperties.put("hibernate.show_sql", "true");
+//		jpaProperties.put("javax.persistence.validation.mode", "none");
+//		//jpaProperties.put("hibernate.format_sql", "true");
+//		return jpaProperties;
+//	}
 
 	@Bean
 	public JpaTransactionManager transactionManager(DataSource dataSource, EntityManagerFactory entityManagerFactory) {

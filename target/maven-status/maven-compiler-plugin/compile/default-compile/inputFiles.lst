@@ -1,6 +1,7 @@
 /home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/SpringConfiguration.java
 /home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/controller/HelloController.java
 /home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/repository/CheckRepository.java
+/home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/SiteMonitoringJpaProperties.java
 /home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/service/CheckService.java
 /home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/service/HelloSpringService.java
 /home/umer/spring/primefaces/src/main/java/com/umer/sitemonitoring/service/InitDbService.java
