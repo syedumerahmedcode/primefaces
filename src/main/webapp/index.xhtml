@@ -35,17 +35,23 @@ The Managed Bean says:
 	</p:column>
 </p:dataTable>
 
-<h:form id="checkForm">
-	<p:focus />
-	<p:panelGrid columns="2">
-		name:
-		<p:inputText value="#{checkListController.check.name}"/>
-		
-		url:
-		<p:inputText value="#{checkListController.check.url}"/>		
-	</p:panelGrid>
-	<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm, :checkTable, :messages"/>
+<h:form>
+	<p:commandButton value="add check" oncomplete="PF('checkDialog').show()" />
 </h:form>
+
+<p:dialog widgetVar="checkDialog" closeOnEscape="true" modal="true" header="check">
+	<h:form id="checkForm">
+		<p:focus />
+		<p:panelGrid columns="2">
+			name:
+			<p:inputText value="#{checkListController.check.name}"/>
+			
+			url:
+			<p:inputText value="#{checkListController.check.url}"/>		
+		</p:panelGrid>
+		<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm, :checkTable, :messages"/>
+	</h:form>
+</p:dialog>
 
 <h:form>
 	<p:confirmDialog global="true" responsive="true" width="350" closeOnEscape="true">
