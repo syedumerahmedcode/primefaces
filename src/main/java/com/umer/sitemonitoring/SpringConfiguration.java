@@ -22,6 +22,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableJpaRepositories
 public class SpringConfiguration {
 	
+	private static final String PACKAGE_TO_SCAN_FOR_ENTITY = "com.umer.sitemonitoring.entity";
 	private static final String HSQL_MEM_PASSWORD = "";
 	private static final String HSQL_MEM_USERNAME = "sa";
 	private static final String HSQLDB_MEM_JDBC_URL = "jdbc:hsqldb:mem:test";
@@ -30,16 +31,21 @@ public class SpringConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean entityManagerFactory=new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setDataSource(dataSource);
+		Properties jpaProperties = createJpaProperties();
+		entityManagerFactory.setJpaProperties(jpaProperties);
+		entityManagerFactory.setPackagesToScan(PACKAGE_TO_SCAN_FOR_ENTITY);
+		entityManagerFactory.setPersistenceProvider(new HibernatePersistenceProvider());
+		return entityManagerFactory;
+		
+	}
+
+	private Properties createJpaProperties() {
 		Properties jpaProperties=new Properties();
 		jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
 		jpaProperties.put("hibernate.show_sql", "true");
 		jpaProperties.put("javax.persistence.validation.mode", "none");
 		//jpaProperties.put("hibernate.format_sql", "true");
-		entityManagerFactory.setJpaProperties(jpaProperties);
-		entityManagerFactory.setPackagesToScan("com.umer.sitemonitoring.entity");
-		entityManagerFactory.setPersistenceProvider(new HibernatePersistenceProvider());
-		return entityManagerFactory;
-		
+		return jpaProperties;
 	}
 
 	@Bean
