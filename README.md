@@ -367,7 +367,6 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 
 **TODO Tasks:**
 
-- Code refactoring.
 - move all version number to properties section in pom file.
 - Use the latest version of all dependencies in pom file.
   
