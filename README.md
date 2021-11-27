@@ -353,7 +353,7 @@ Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is exe
 <p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm" oncomplete="PF('checkDialog').show()"/>
 ```
 
--In order to have a clean modal dialog for adding checks after an edit is performed, we need to do the following:
+- In order to have a clean modal dialog for adding checks after an edit is performed, we need to do the following:
 
 ```xhtml
 <h:form>
