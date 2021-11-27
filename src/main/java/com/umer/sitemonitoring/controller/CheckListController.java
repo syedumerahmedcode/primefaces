@@ -25,9 +25,10 @@ public class CheckListController implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private static final String CHECK_REMOVED = "Check removed.";
 	private static final String CHECK_SAVED = "Check saved.";
+	private static final String CHECK_SERVICE_MANAGED_PROPERTY="#{checkService}";
 
 
-	@ManagedProperty("#{checkService}")
+	@ManagedProperty(CHECK_SERVICE_MANAGED_PROPERTY)
 	private CheckService checkService;
 
 	private List<Check> checks;
@@ -54,12 +55,7 @@ public class CheckListController implements Serializable {
 		checkService.remove(check);
 		getAllEntries();
 		addNotificationMessage(CHECK_REMOVED);
-	}
-
-	private void addNotificationMessage(String messageToDisplay) {
-		FacesContext.getCurrentInstance().addMessage(null,
-				new FacesMessage(FacesMessage.SEVERITY_INFO, messageToDisplay, null));
-	}
+	}	
 
 	private void getAllEntries() {
 		checks = checkService.findAll();
@@ -73,6 +69,11 @@ public class CheckListController implements Serializable {
 	 */
 	private void clearChecks() {
 		check = new Check();
+	}
+	
+	private void addNotificationMessage(String messageToDisplay) {
+		FacesContext.getCurrentInstance().addMessage(null,
+				new FacesMessage(FacesMessage.SEVERITY_INFO, messageToDisplay, null));
 	}
 
 }
