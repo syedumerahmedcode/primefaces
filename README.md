@@ -30,7 +30,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 4: Java EE welcome file_
 
 - How to make the index.xhtml file the default start page when the jetty server starts? Open web.xml file ---> Under <welcome-file-list> tag, only allow
 
-```xml
+```xhtml
 
 <welcome-file>index.xhtml</welcome-file>
 
@@ -265,7 +265,7 @@ FacesContext.getCurrentInstance().addMessage(null,
 Additionally, one must add it as a value of update attribute in the save button with a **:** since the component is outside of the HTML form.
 - On the front-end side, add
 
-```xml
+```xhtml
 
 <p:messages id="messages"/>
 
@@ -282,7 +282,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 16: complete JSF CRUD application_
 
 - For editing, we created a separate column which contains a command button:
  
-```xml
+```xhtml
 
 <p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm"/>
 
@@ -292,7 +292,7 @@ Here, _action="#{checkListController.setCheck(check)}"_ allows us to fetch the c
 
 - For removing a record, we created the following command button:
 
-```xml
+```xhtml
 
 <p:commandButton value="remove" action="#{checkListController.remove(check)}" update=":checkTable, :messages"/>
 
@@ -304,7 +304,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 17: PrimeFaces Confirm Dialog_
 
 - For confirm dialog, we have two parts:
 
-```xml
+```xhtml
 
 <p:confirm header="Confirmation" message="Do you want to delete this record?" icon="pi pi-info-circle"/>
 
@@ -313,7 +313,7 @@ This will create the dialog box.
 
 Second part is:
 
-```xml
+```xhtml
 <h:form>
 	<p:confirmDialog global="true" responsive="true" width="350">
         <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no ui-button-flat"/>
@@ -327,7 +327,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 18: PrimeFaces Dialog_
 
 - In order to make a modal dialog, the complete _h:form id="checkForm"_ is now under a dialog tag.
 
-```xml
+```xhtml
 
 <p:dialog widgetVar="checkDialog" closeOnEscape="true" modal="true" header="check">
 	<h:form id="checkForm">
@@ -346,12 +346,20 @@ _JSF & PrimeFaces & Spring tutorial - Part 18: PrimeFaces Dialog_
 
 Here, we also need to create a button which executes this prime faces modal dialog via java script.
 
-```xml
+```xhtml
 <h:form>
 	<p:commandButton value="add check" oncomplete="PF('checkDialog').show()" />
 </h:form>
 ```
 Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is executed once a Ajax request is send and response is acquired. **Attention:** _checkDialog_ passed an argument to PF() must be same as widgetVar in _p:dialog widgetVar="checkDialog"_.
+
+- In order to make edit button also open the modal dialog, we added _oncomplete="PF('checkDialog').show()"_ to the edit button. 
+
+```xhtml
+<p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm" oncomplete="PF('checkDialog').show()"/>
+```
+
+-
 
 **TODO Tasks:**
 
