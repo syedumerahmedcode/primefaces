@@ -22,6 +22,10 @@ import lombok.Setter;
 @ViewScoped
 public class CheckListController implements Serializable {
 
+	private static final String CHECK_REMOVED = "Check removed.";
+
+	private static final String CHECK_SAVED = "Check saved.";
+
 	private static final long serialVersionUID = 1L;
 
 	@ManagedProperty("#{checkService}")
@@ -41,7 +45,7 @@ public class CheckListController implements Serializable {
 		clearChecks();
 		getAllEntries();
 		FacesContext.getCurrentInstance().addMessage(null,
-				new FacesMessage(FacesMessage.SEVERITY_INFO, "Check saved.", null));
+				new FacesMessage(FacesMessage.SEVERITY_INFO, CHECK_SAVED, null));
 	}
 
 	public void clear() {
@@ -52,7 +56,7 @@ public class CheckListController implements Serializable {
 		checkService.remove(check);
 		getAllEntries();
 		FacesContext.getCurrentInstance().addMessage(null,
-				new FacesMessage(FacesMessage.SEVERITY_INFO, "Check removed.", null));
+				new FacesMessage(FacesMessage.SEVERITY_INFO, CHECK_REMOVED, null));
 	}
 
 	private void getAllEntries() {
