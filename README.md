@@ -1,12 +1,6 @@
 # Site monitoring using primefaces
 
-**Reference:**
 
-Current:
-- [1](https://www.youtube.com/watch?v=3RFhjzNdbfA&list=PLmcxdcWPhFqPq23QswZYbKvhs2Eo6XyJA): JSF & PrimeFaces & Spring tutorial 
-
-Future:
-https://www.youtube.com/watch?v=EPsIiyJdKts&list=PLCaS22Sjc8YQ0bvX0OLwdS6-Fw6ppr77Z
 
 **Notes:**
 
@@ -359,7 +353,17 @@ Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is exe
 <p:commandButton value="edit" action="#{checkListController.setCheck(check)}" update=":checkForm" oncomplete="PF('checkDialog').show()"/>
 ```
 
--
+-In order to have a clean modal dialog for adding checks after an edit is performed, we need to do the following:
+
+```xhtml
+<h:form>
+	<p:commandButton value="add check" action="#{checkListController.clear()}" 
+					 update=":checkForm" 
+					 oncomplete="PF('checkDialog').show()" />
+</h:form>
+```
+We call the clear() method from the controller in _action_, we call _update=":checkForm"_ so that the form is reloaded and finally, we call _oncomplete="PF('checkDialog').show()"_ to display the modal dialog.
+
 
 **TODO Tasks:**
 
@@ -368,3 +372,9 @@ Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is exe
 - Use the latest version of all dependencies in pom file.
   
 
+**Reference:**
+
+Current:
+- [1](https://www.youtube.com/watch?v=3RFhjzNdbfA&list=PLmcxdcWPhFqPq23QswZYbKvhs2Eo6XyJA): JSF & PrimeFaces & Spring tutorial**(Primary resource)**
+- [2](https://www.youtube.com/watch?v=EPsIiyJdKts&list=PLCaS22Sjc8YQ0bvX0OLwdS6-Fw6ppr77Z): Youtube series
+- [3](https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=ebb3a): PrimeFaces showcase
