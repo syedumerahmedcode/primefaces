@@ -325,7 +325,33 @@ This creates the options of _yes_ or _no_. **Attention:** This part must be writ
 
 _JSF & PrimeFaces & Spring tutorial - Part 18: PrimeFaces Dialog_
 
-- 
+- In order to make a modal dialog, the complete _h:form id="checkForm"_ is now under a dialog tag.
+
+```xml
+
+<p:dialog widgetVar="checkDialog" closeOnEscape="true" modal="true" header="check">
+	<h:form id="checkForm">
+		<p:focus />
+		<p:panelGrid columns="2">
+			name:
+			<p:inputText value="#{checkListController.check.name}"/>
+			
+			url:
+			<p:inputText value="#{checkListController.check.url}"/>		
+		</p:panelGrid>
+		<h:commandButton value="save" action="#{checkListController.save()}" update="checkForm, :checkTable, :messages"/>
+	</h:form>
+</p:dialog>
+```
+
+Here, we also need to create a button which executes this prime faces modal dialog via java script.
+
+```xml
+<h:form>
+	<p:commandButton value="add check" oncomplete="PF('checkDialog').show()" />
+</h:form>
+```
+Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is executed once a Ajax request is send and response is acquired. **Attention:** _checkDialog_ passed an argument to PF() must be same as widgetVar in _p:dialog widgetVar="checkDialog"_.
 
 **TODO Tasks:**
 
