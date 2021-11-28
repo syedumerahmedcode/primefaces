@@ -365,10 +365,6 @@ Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is exe
 We call the clear() method from the controller in _action_, we call _update=":checkForm"_ so that the form is reloaded and finally, we call _oncomplete="PF('checkDialog').show()"_ to display the modal dialog.
 
 
-**TODO Tasks:**
-
-- move all version number to properties section in pom file.
-- Use the latest version of all dependencies in pom file.
   
 
 **Reference:**
