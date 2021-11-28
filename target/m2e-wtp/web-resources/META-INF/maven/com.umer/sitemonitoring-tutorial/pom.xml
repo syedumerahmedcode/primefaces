@@ -24,6 +24,8 @@
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<source.version>1.8</source.version>
 		<target.version>1.8</target.version>
+		<!-- dependencyManagement version -->
+		<spring-framework-bom.version>4.1.4.RELEASE</spring-framework-bom.version>
 	</properties>
 
 	<dependencies>
@@ -89,7 +91,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -116,13 +117,11 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-framework-bom</artifactId>
-				<version>4.1.4.RELEASE</version>
+				<version>${spring-framework-bom.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-
-
+	
 </project>
