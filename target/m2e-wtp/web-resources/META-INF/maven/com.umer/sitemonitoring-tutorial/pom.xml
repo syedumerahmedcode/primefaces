@@ -19,6 +19,11 @@
 		<primefaces.version>5.1</primefaces.version>
 		<javax.faces.version>2.2.8</javax.faces.version>
 		<javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+		<!-- build plugin version -->
+		<jetty-maven-plugin.version>9.2.6.v20141205</jetty-maven-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<source.version>1.8</source.version>
+		<target.version>1.8</target.version>
 	</properties>
 
 	<dependencies>
@@ -92,15 +97,15 @@
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.6.v20141205</version>
+				<version>${jetty-maven-plugin.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${source.version}</source>
+					<target>${target.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>
