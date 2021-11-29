@@ -1,6 +1,9 @@
 # Site monitoring using primefaces
 
 
+## Introduction
+
+- To be defined.
 
 **Notes:**
 
