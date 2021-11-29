@@ -364,6 +364,14 @@ Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is exe
 ```
 We call the clear() method from the controller in _action_, we call _update=":checkForm"_ so that the form is reloaded and finally, we call _oncomplete="PF('checkDialog').show()"_ to display the modal dialog.
 
+## Technologies Used
+
+- Java 11
+- PrimeFaces
+- SpringBoot
+
+- Give a brief explanation of each technology.
+
 ## Prerequisities
 
 - To be defined.
