@@ -5,6 +5,10 @@
 
 - To be defined.
 
+## Out Of Scope
+
+- To be defined.
+
 **Notes:**
 
 _JSF & PrimeFaces & Spring tutorial - Part 1: Hello World JSF _
