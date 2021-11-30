@@ -3,7 +3,8 @@
 ## Table of content
 - [Introduction](#introduction)
 - [Out Of Scope](#out-of-scope)
-- [Explanation Part 1: Hello World JSF](#explanation-part-1-hello-world-jsf)
+- [Explanation of Hello World in JSF](#explanation-of-hello-world-in-jsf)
+- [Explanation Part 2: Hello World JSF](#explanation-part-2-jsf-in-eclipse)
 
 ## Introduction
 
@@ -15,7 +16,7 @@
 
 **Notes:**
 
-## Explanation Part 1 Hello World JSF
+## Explanation of Hello World in JSF
 
 - In case web.xml is not present in the project, it can be generated via Deployment Descriptor: primefaces ---> Generate Deployment Descriptor Stub.
 
@@ -23,7 +24,7 @@
 
 - The index page is available at: _http://localhost:8080/index.xhtml_
 
-_JSF & PrimeFaces & Spring tutorial - Part 2: JSF in Eclipse_
+## Explanation Part 2 JSF in Eclipse
 
 - **How to make intelliSense/Code assist work for JSF**(Follow everything defined in part 2 of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
 
