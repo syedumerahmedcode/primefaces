@@ -1,5 +1,9 @@
 # Site monitoring using primefaces
 
+## Table of content
+- [Introduction](#introduction)
+- [Out Of Scope](#out-of-scope)
+- [Explanation Part 1: Hello World JSF](#explanation-part-1-hello-world-jsf)
 
 ## Introduction
 
@@ -11,7 +15,7 @@
 
 **Notes:**
 
-_JSF & PrimeFaces & Spring tutorial - Part 1: Hello World JSF _
+## Explanation Part 1 Hello World JSF
 
 - In case web.xml is not present in the project, it can be generated via Deployment Descriptor: primefaces ---> Generate Deployment Descriptor Stub.
 
