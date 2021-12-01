@@ -26,11 +26,12 @@
 
 ## Introduction
 
-The aim of this project is to show case the different ways in how Spring can be used together with JSF and PrimeFaces. For this project, a site monitoring tool is envisioned in which one can enter the name of the website and its URL. One can also edit and later delete any entries from the data table. For displaying entries in a data table, Prime Faces are used.   
+The aim of this project is to show case the different ways in how Spring can be used together with JSF and PrimeFaces. For this project, a site monitoring tool is envisioned in which one can enter the name of the web site and its URL. One can also edit and later delete any entries from the data table. For displaying entries in a data table, Prime Faces are used.   
 
 ## Out Of Scope
 
-- To be defined.
+Since only basic implementation of data table from Prime faces is targeted for this project and the main idea is just to see them in action, unit tests are out of scope. Similarly, only certain prime faces components are used(namely: Growl, Modal Dialog and Messages), rest of the components are out of scope.  
+
 
 **Notes:**
 
