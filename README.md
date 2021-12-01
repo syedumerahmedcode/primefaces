@@ -14,10 +14,10 @@
 - [Explanation of JSF bean scopes](#explanation-of-jsf-bean-scopes)
 - [Explanation of PrimeFaces update](#explanation-of-primefaces-update)
 - [Explanation of JSF messages and growl](#explanation-of-jsf-messages-and-growl)
-- [Explanation of JSF Validation With Hibernate Validator](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of complete JSF CRUD application](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of PrimeFaces Confirm Dialog](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of PrimeFaces Dialog](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of JSF Validation With Hibernate Validator](#explanation-of-jsf-validation-with-hibernate-validator)
+- [Explanation of complete JSF CRUD application](#explanation-of-complete-jsf-crud-application)
+- [Explanation of PrimeFaces Confirm Dialog](#explanation-of-primefaces-confirm-dialog)
+- [Explanation of PrimeFaces Dialog](#explanation-of-primefaces-dialog)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
 - [Commands](#commands)
@@ -299,11 +299,11 @@ Additionally, one must add it as a value of update attribute in the save button 
 
 - Using **<p:growl />** (Of Mac style based) provides a much nicer save message.
 
-_JSF & PrimeFaces & Spring tutorial - Part 15: JSF Validation With Hibernate Validator_
+## Explanation of JSF Validation With Hibernate Validator
 
 - Using standard Hibernate validator for checking fields here. One can also think of using javax.validations.
 
-_JSF & PrimeFaces & Spring tutorial - Part 16: complete JSF CRUD application_
+## Explanation of complete JSF CRUD application
 
 - For editing, we created a separate column which contains a command button:
  
@@ -325,7 +325,7 @@ Here, _action="#{checkListController.setCheck(check)}"_ allows us to fetch the c
 
 Here: _action="#{checkListController.remove(check)}"_ calls the remove() method in check controller whereas in _update=":checkTable, :messages"_ since we want to update the data table, we pass _checkTable_ as argument and in order to display a 'checks removed' message, we also pass _:messages_ to update attribute.
 
-_JSF & PrimeFaces & Spring tutorial - Part 17: PrimeFaces Confirm Dialog_
+## Explanation of PrimeFaces Confirm Dialog
 
 - For confirm dialog, we have two parts:
 
@@ -348,7 +348,7 @@ Second part is:
 ```
 This creates the options of _yes_ or _no_. **Attention:** This part must be written inside a HTML form. 
 
-_JSF & PrimeFaces & Spring tutorial - Part 18: PrimeFaces Dialog_
+## Explanation of PrimeFaces Dialog
 
 - In order to make a modal dialog, the complete _h:form id="checkForm"_ is now under a dialog tag.
 
