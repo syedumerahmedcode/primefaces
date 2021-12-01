@@ -4,7 +4,25 @@
 - [Introduction](#introduction)
 - [Out Of Scope](#out-of-scope)
 - [Explanation of Hello World in JSF](#explanation-of-hello-world-in-jsf)
-- [Explanation Part 2: Hello World JSF](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of how to setup JSF in eclipse](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of Java EE welcome file_](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of JSF & Spring integration](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of ManagedBean vs Component vs Named scopes](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of Spring Data JPA & Hibernate](#explanation-part-2-jsf-in-eclipse)
+- [Explanation PrimeFaces DataTable](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of JSF Form tag](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of JSF bean scopes](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of PrimeFaces update](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of JSF Validation With Hibernate Validator](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of complete JSF CRUD application](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of PrimeFaces Confirm Dialog](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of PrimeFaces Dialog](#explanation-part-2-jsf-in-eclipse)
+- [Technologies Used](#technologies-used)
+- [Prerequisities](#prerequisities)
+- [Commands](#commands)
+- [Contribution](#contribution)
+- [References](#references)
+- [Contact Information](#contact-information)
 
 ## Introduction
 
@@ -397,7 +415,7 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 
 Feature requests, issues, pull requests and questions are welcome.
 
-**Reference:**
+## References
 
 Current:
 - [1](https://www.youtube.com/watch?v=3RFhjzNdbfA&list=PLmcxdcWPhFqPq23QswZYbKvhs2Eo6XyJA): JSF & PrimeFaces & Spring tutorial**(Primary resource)**
