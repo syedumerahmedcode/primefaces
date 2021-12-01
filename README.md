@@ -26,7 +26,7 @@
 
 ## Introduction
 
-- To be defined.
+The aim of this project is to show case the different ways in how Spring can be used together with JSF and PrimeFaces. For this project, a site monitoring tool is envisioned in which one can enter the name of the website and its URL. One can also edit and later delete any entries from the data table. For displaying entries in a data table, Prime Faces are used.   
 
 ## Out Of Scope
 
