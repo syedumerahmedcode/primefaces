@@ -7,12 +7,13 @@
 - [Explanation of how to setup JSF in eclipse](#explanation-of-how-to-setup-jsf-in-eclipse)
 - [Explanation of Java EE welcome file](#explanation-of-java-ee-welcome-file)
 - [Explanation of JSF and Spring integration](#explanation-of-jsf-and-spring-integration)
-- [Explanation of ManagedBean vs Component vs Named scopes](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of Spring Data JPA & Hibernate](#explanation-part-2-jsf-in-eclipse)
-- [Explanation PrimeFaces DataTable](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of JSF Form tag](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of JSF bean scopes](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of PrimeFaces update](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of ManagedBean vs Component vs Named scopes](#explanation-of-managedbean-vs-component-vs-named-scopes)
+- [Explanation of Spring Data JPA and Hibernate](#explanation-of-spring-data-jpa-and-hibernate)
+- [Explanation of PrimeFaces DataTable](#explanation-of-primefaces-datatable)
+- [Explanation of JSF Form tag](#explanation-of-jsf-form-tag)
+- [Explanation of JSF bean scopes](#explanation-of-jsf-bean-scopes)
+- [Explanation of PrimeFaces update](#explanation-of-primefaces-update)
+- [Explanation of JSF messages and growl](#explanation-of-jsf-messages-and-growl)
 - [Explanation of JSF Validation With Hibernate Validator](#explanation-part-2-jsf-in-eclipse)
 - [Explanation of complete JSF CRUD application](#explanation-part-2-jsf-in-eclipse)
 - [Explanation of PrimeFaces Confirm Dialog](#explanation-part-2-jsf-in-eclipse)
@@ -133,7 +134,7 @@ To counter this, please create a setter method as follows:
 
 ```
 
-_JSF & PrimeFaces & Spring tutorial - Part 6: ManagedBean vs Component vs Named_
+## Explanation of ManagedBean vs Component vs Named scopes
 
 - Using _@ManagedBean_ along with _ManagedProperty("#{helloSpringService}")_ means that beans are managed by JSF Runtime. However, if we use _@Component_ along with _@Autowired_, then beans are managed by Spring framework.
 
@@ -206,7 +207,7 @@ public class HelloController {
 ```
 
 
-_JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
+## Explanation of Spring Data JPA and Hibernate
 
 - https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> this fixed the compilation problem with lombok.
 
@@ -218,7 +219,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 9: Spring Data JPA & Hibernate_
 
 - https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory ---> How to avoid hibernate problem with the creation of entitymanagerfactory
 
-_JSF & PrimeFaces & Spring tutorial - Part 10: PrimeFaces DataTable_
+## Explanation of PrimeFaces DataTable
 
 - Consider the following code:
 
@@ -240,7 +241,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 10: PrimeFaces DataTable_
 - _p:column_ represents a JSF style column with the name of the column represented via _headerText="name"_. There is no special tag used for displaying row in the example.
 
 
-_JSF & PrimeFaces & Spring tutorial - Part 11: JSF Form tag_
+## Explanation of JSF Form tag
 
 - _<h:form>_ generates HTML form.
 
@@ -260,7 +261,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 11: JSF Form tag_
 - A **check** object is created. **Attention:** By default, all JSF objects are initialized with null hence, we must call new operator to initialize the object.
 - We call the **save** method in **Controller** ---> this will call the **save()** method in **Service** ---> this uses **repository** to **save** the element.
 
-_JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
+## Explanation of JSF bean scopes
 
 - [JSF Bean Scope & Description](https://www.tutorialspoint.com/jsf/jsf_managed_beans.htm)
 
@@ -272,12 +273,12 @@ _JSF & PrimeFaces & Spring tutorial - Part 12: JSF bean scopes_
 
 - We use **javax.faces.bean.ViewScoped** as import class as it works together with ManagedBean. _javax.faces.view_ works with CDI context which we are not using.  
 
-_JSF & PrimeFaces & Spring tutorial - Part 13: PrimeFaces update_
+## Explanation of PrimeFaces update
 
 - In order to make data from text box disappear after save button is clickwed, add _update="checkForm"_ in save button. **Attention:** This must match the **form id**.
 - In order to dynamically update the data table, we need to add _update="checkForm, :checkTable"_ in save button. Here, we add **,** to indicate that this is an additional component and **:** since this component is outside the form. ---> On the back-end side, in CheckListController class, we add **checks = checkService.findAll();** in **save()** method so that the data is reloaded not only at system start-up but also after save button is pressed. 
 
-_JSF & PrimeFaces & Spring tutorial - Part 14: JSF messages & growl_
+## Explanation of JSF messages and growl
 
 - In order to display the success message on save, we added the following line in **CheckListCokntroller.save()** method.
 
