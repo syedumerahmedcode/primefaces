@@ -4,9 +4,9 @@
 - [Introduction](#introduction)
 - [Out Of Scope](#out-of-scope)
 - [Explanation of Hello World in JSF](#explanation-of-hello-world-in-jsf)
-- [Explanation of how to setup JSF in eclipse](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of Java EE welcome file_](#explanation-part-2-jsf-in-eclipse)
-- [Explanation of JSF & Spring integration](#explanation-part-2-jsf-in-eclipse)
+- [Explanation of how to setup JSF in eclipse](#explanation-of-how-to-setup-jsf-in-eclipse)
+- [Explanation of Java EE welcome file](#explanation-of-java-ee-welcome-file)
+- [Explanation of JSF and Spring integration](#explanation-of-jsf-and-spring-integration)
 - [Explanation of ManagedBean vs Component vs Named scopes](#explanation-part-2-jsf-in-eclipse)
 - [Explanation of Spring Data JPA & Hibernate](#explanation-part-2-jsf-in-eclipse)
 - [Explanation PrimeFaces DataTable](#explanation-part-2-jsf-in-eclipse)
@@ -33,7 +33,6 @@ The aim of this project is to show case the different ways in how Spring can be 
 Since only basic implementation of data table from Prime faces is targeted for this project and the main idea is just to see them in action, unit tests are out of scope. Similarly, only certain prime faces components are used(namely: Growl, Modal Dialog and Messages), rest of the components are out of scope.  
 
 
-**Notes:**
 
 ## Explanation of Hello World in JSF
 
@@ -43,7 +42,7 @@ Since only basic implementation of data table from Prime faces is targeted for t
 
 - The index page is available at: _http://localhost:8080/index.xhtml_
 
-## Explanation Part 2 JSF in Eclipse
+## Explanation of how to setup JSF in eclipse
 
 - **How to make intelliSense/Code assist work for JSF**(Follow everything defined in part 2 of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
 
@@ -51,7 +50,7 @@ Since only basic implementation of data table from Prime faces is targeted for t
 
 - Close all open files ---> Open index.xhtml file with **JBoss Tools HTML Editor**.
 
-_JSF & PrimeFaces & Spring tutorial - Part 4: Java EE welcome file_
+## Explanation of Java EE welcome file
 
 - How to make the index.xhtml file the default start page when the jetty server starts? Open web.xml file ---> Under <welcome-file-list> tag, only allow
 
@@ -63,7 +62,7 @@ _JSF & PrimeFaces & Spring tutorial - Part 4: Java EE welcome file_
 
 ---> run the jetty server using 'mvn jetty:run' ---> Open localhost:8080 ---> default page is the index.xhtnl page.
 
-_JSF & PrimeFaces & Spring tutorial - Part 5: JSF & Spring integration_
+## Explanation of JSF and Spring integration
 
 - The reason we do not specify version for _spring-web_ artifact Id is because the version number is already defined in dependencyManagement---> <artifactId>spring-framework-bom</artifactId>
 
