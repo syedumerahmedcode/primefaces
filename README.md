@@ -227,7 +227,7 @@ The important points in this section are as follows:
 
 - https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> this fixed the compilation problem with lombok.
 
-- in this project, we are using _HikariCP_ connection pool to make connections to the database.
+- in this project, we are using _HikariCP_ connection pool to make connections to the database and _HSQLDB (HyperSQL Database)_ is used as relational database for this project.
 
 - TODO: Describe the purpose of _hikaricp_ and _hsqldb_ dependencies. 
 
@@ -439,6 +439,7 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 - PrimeFaces
 - SpringBoot
 - [HikariCP](https://zetcode.com/articles/hikaricp/): HikariCP is solid high-performance JDBC connection pool. A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools may significantly reduce the overall resource usage. 
+- [HSQLDB](http://hsqldb.org/web/hsqlDocsFrame.html): HSQLDB (Hyper SQL Database) is a relational database management system written in Java. It has a JDBC driver and supports a large subset of SQL-92, SQL:2008, SQL:2011, and SQL:2016 standards.[2] It offers a fast,[3] small (around 1300 kilobytes in version 2.2) database engine which offers both in-memory and disk-based tables. Both embedded and server modes are available. 
 
 - Give a brief explanation of each technology.
 
@@ -462,6 +463,7 @@ Current:
 - [2](https://www.youtube.com/watch?v=EPsIiyJdKts&list=PLCaS22Sjc8YQ0bvX0OLwdS6-Fw6ppr77Z): Youtube series
 - [3](https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=ebb3a): PrimeFaces showcase
 - [4](https://zetcode.com/articles/hikaricp/): Using HikariCP connection pool 
+- [5](http://hsqldb.org/web/hsqlDocsFrame.html): HyperSQL Documentation
 
 ## Contact Information
 
