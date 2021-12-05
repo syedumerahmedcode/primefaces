@@ -461,6 +461,7 @@ Current:
 - [1](https://www.youtube.com/watch?v=3RFhjzNdbfA&list=PLmcxdcWPhFqPq23QswZYbKvhs2Eo6XyJA): JSF & PrimeFaces & Spring tutorial**(Primary resource)**
 - [2](https://www.youtube.com/watch?v=EPsIiyJdKts&list=PLCaS22Sjc8YQ0bvX0OLwdS6-Fw6ppr77Z): Youtube series
 - [3](https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=ebb3a): PrimeFaces showcase
+- [4](https://zetcode.com/articles/hikaricp/): Using HikariCP connection pool 
 
 ## Contact Information
 
