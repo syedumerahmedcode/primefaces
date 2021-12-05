@@ -41,6 +41,8 @@ Since only basic implementation of data table from Prime faces is targeted for t
 
 ## Explanation of Hello World in JSF
 
+The important points in this section are as follows:
+
 - In case web.xml is not present in the project, it can be generated via Deployment Descriptor: primefaces ---> Generate Deployment Descriptor Stub.
 
 - The command to run on terminal is: _mvn jetty:run_
@@ -49,6 +51,8 @@ Since only basic implementation of data table from Prime faces is targeted for t
 
 ## Explanation of how to setup JSF in eclipse
 
+The important points in this section are as follows:
+
 - **How to make intelliSense/Code assist work for JSF**(Follow everything defined in part 2 of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
 
 - Right click on Project  ---> Configure ---> Add JSF Capabilities ---> Click on 'Further Configuration Required' link ---> Select Type: Disable Library Configuration ---> Uncheck 'Configure JSF Servlet in deployment descriptor'(Reason: We already did it in web.xml)
@@ -56,6 +60,8 @@ Since only basic implementation of data table from Prime faces is targeted for t
 - Close all open files ---> Open index.xhtml file with **JBoss Tools HTML Editor**.
 
 ## Explanation of Java EE welcome file
+
+The important points in this section are as follows:
 
 - How to make the index.xhtml file the default start page when the jetty server starts? Open web.xml file ---> Under <welcome-file-list> tag, only allow
 
@@ -68,6 +74,8 @@ Since only basic implementation of data table from Prime faces is targeted for t
 ---> run the jetty server using 'mvn jetty:run' ---> Open localhost:8080 ---> default page is the index.xhtnl page.
 
 ## Explanation of JSF and Spring integration
+
+The important points in this section are as follows:
 
 - The reason we do not specify version for _spring-web_ artifact Id is because the version number is already defined in dependencyManagement---> <artifactId>spring-framework-bom</artifactId>
 
@@ -139,6 +147,8 @@ To counter this, please create a setter method as follows:
 ```
 
 ## Explanation of ManagedBean vs Component vs Named scopes
+
+The important points in this section are as follows:
 
 - Using _@ManagedBean_ along with _ManagedProperty("#{helloSpringService}")_ means that beans are managed by JSF Runtime. However, if we use _@Component_ along with _@Autowired_, then beans are managed by Spring framework.
 
@@ -213,6 +223,8 @@ public class HelloController {
 
 ## Explanation of Spring Data JPA and Hibernate
 
+The important points in this section are as follows:
+
 - https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> this fixed the compilation problem with lombok.
 
 - TODO: Describe the purpose of _hikaricp_ and _hsqldb_ dependencies. 
@@ -224,6 +236,8 @@ public class HelloController {
 - https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory ---> How to avoid hibernate problem with the creation of entitymanagerfactory
 
 ## Explanation of PrimeFaces DataTable
+
+The important points in this section are as follows:
 
 - Consider the following code:
 
@@ -247,6 +261,8 @@ public class HelloController {
 
 ## Explanation of JSF Form tag
 
+The important points in this section are as follows:
+
 - _<h:form>_ generates HTML form.
 
 - _<p:panelGrid columns="2">_ generates a HTML table with two columns.
@@ -254,6 +270,8 @@ public class HelloController {
 - _<h:commandButton action="" value="save" />_, this generates a save button.
 
 **How to bind the JSF front-end with the Controller Backend:**
+
+The important points in this section are as follows:
 
 - On the front-end side:
 - Input for **url** are captured via _value="#{checkListController.check.url}"_ in input field.
@@ -267,6 +285,8 @@ public class HelloController {
 
 ## Explanation of JSF bean scopes
 
+The important points in this section are as follows:
+
 - [JSF Bean Scope & Description](https://www.tutorialspoint.com/jsf/jsf_managed_beans.htm)
 
 - Why is @managedBean inefficient? Because @ManagedBean is created again and again on every request to the server. Hence, even when saving a new entry into the database, a select command on the database is executed first.
@@ -279,10 +299,14 @@ public class HelloController {
 
 ## Explanation of PrimeFaces update
 
+The important points in this section are as follows:
+
 - In order to make data from text box disappear after save button is clickwed, add _update="checkForm"_ in save button. **Attention:** This must match the **form id**.
 - In order to dynamically update the data table, we need to add _update="checkForm, :checkTable"_ in save button. Here, we add **,** to indicate that this is an additional component and **:** since this component is outside the form. ---> On the back-end side, in CheckListController class, we add **checks = checkService.findAll();** in **save()** method so that the data is reloaded not only at system start-up but also after save button is pressed. 
 
 ## Explanation of JSF messages and growl
+
+The important points in this section are as follows:
 
 - In order to display the success message on save, we added the following line in **CheckListCokntroller.save()** method.
 
@@ -305,9 +329,13 @@ Additionally, one must add it as a value of update attribute in the save button 
 
 ## Explanation of JSF Validation With Hibernate Validator
 
+The important points in this section are as follows:
+
 - Using standard Hibernate validator for checking fields here. One can also think of using javax.validations.
 
 ## Explanation of complete JSF CRUD application
+
+The important points in this section are as follows:
 
 - For editing, we created a separate column which contains a command button:
  
@@ -331,6 +359,8 @@ Here: _action="#{checkListController.remove(check)}"_ calls the remove() method 
 
 ## Explanation of PrimeFaces Confirm Dialog
 
+The important points in this section are as follows:
+
 - For confirm dialog, we have two parts:
 
 ```xhtml
@@ -353,6 +383,8 @@ Second part is:
 This creates the options of _yes_ or _no_. **Attention:** This part must be written inside a HTML form. 
 
 ## Explanation of PrimeFaces Dialog
+
+The important points in this section are as follows:
 
 - In order to make a modal dialog, the complete _h:form id="checkForm"_ is now under a dialog tag.
 
