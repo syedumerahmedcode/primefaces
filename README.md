@@ -31,6 +31,8 @@ The aim of this project is to show case the different ways in how Spring can be 
 
 - **Attention:** This project does not contain the latest dependencies in pom.xml.
 
+This readme file contains explanation regarding various sections which are completed during the development of this project. Here, only important pints are highlighted as bullet points.
+
 ## Out Of Scope
 
 Since only basic implementation of data table from Prime faces is targeted for this project and the main idea is just to see them in action, unit tests are out of scope. Similarly, only certain prime faces components are used(namely: Growl, Modal Dialog and Messages), rest of the components are out of scope.  
