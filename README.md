@@ -227,6 +227,8 @@ The important points in this section are as follows:
 
 - https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> this fixed the compilation problem with lombok.
 
+- in this project, we are using _HikariCP_ connection pool to make connections to the database.
+
 - TODO: Describe the purpose of _hikaricp_ and _hsqldb_ dependencies. 
 
 - Service is created during application start-up since it is a singleton.
@@ -436,6 +438,7 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 - Java 11
 - PrimeFaces
 - SpringBoot
+- [HikariCP](https://zetcode.com/articles/hikaricp/): HikariCP is solid high-performance JDBC connection pool. A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools may significantly reduce the overall resource usage. 
 
 - Give a brief explanation of each technology.
 
