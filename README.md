@@ -71,7 +71,7 @@ The important points in this section are as follows:
 
 ```
 
----> run the jetty server using 'mvn jetty:run' ---> Open localhost:8080 ---> default page is the index.xhtnl page.
+---> run the jetty server using 'mvn jetty:run' ---> Open localhost:8080 ---> default page is the index.xhtml page.
 
 ## Explanation of JSF and Spring integration
 
@@ -128,6 +128,8 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
 ```
 
 Please note that if the setter for the service bean is not present, the following error occurs when running the application.
+
+There is a possibility that the following error occurs:
 
 **Unable to create managed bean helloController. The following problems were found: - Property helloSpringService for managed bean helloController does not exist. Check that appropriate getter and/or setter methods exist.**
 
@@ -290,8 +292,6 @@ The important points in this section are as follows:
 ## Explanation of JSF bean scopes
 
 The important points in this section are as follows:
-
-- [JSF Bean Scope & Description](https://www.tutorialspoint.com/jsf/jsf_managed_beans.htm)
 
 - Why is @managedBean inefficient? Because @ManagedBean is created again and again on every request to the server. Hence, even when saving a new entry into the database, a select command on the database is executed first.
 
@@ -488,6 +488,7 @@ Current:
 - [6](https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC):  This fixed the compilation problem with lombok.
 - [7](https://stackoverflow.com/questions/53690136/the-import-javax-annotation-postconstruct-cannot-be-resolved): This explains the problem with @PostConstrcut annotation not being recognized. **(Stack Overflow)**
 - [8](https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory): How to avoid hibernate problem with the creation of entitymanagerfactory
+- [9](https://www.tutorialspoint.com/jsf/jsf_managed_beans.htm): JSF Bean Scope & Description
 
 ## Contact Information
 
