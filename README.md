@@ -53,7 +53,7 @@ The important points in this section are as follows:
 
 The important points in this section are as follows:
 
-- **How to make intelliSense/Code assist work for JSF**(Follow everything defined in part 2 of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
+- **How to make intelliSense/Code assist work for JSF**(Follow everything defined in this section of the readme file)? Help ---> Eclipse Marketplace ---> Search for 'JBoss Tools' ---> We selected luna ---> In the next window, we only select JSF.  
 
 - Right click on Project  ---> Configure ---> Add JSF Capabilities ---> Click on 'Further Configuration Required' link ---> Select Type: Disable Library Configuration ---> Uncheck 'Configure JSF Servlet in deployment descriptor'(Reason: We already did it in web.xml)
 
@@ -445,7 +445,7 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 
 ## Prerequisities
 
-- To be defined.
+- Jetty server needs to be configured so that the welcome page is displayed correctly. How to configure this is defined above.
 
 ## Commands
 
