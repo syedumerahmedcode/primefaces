@@ -155,15 +155,15 @@ The important points in this section are as follows:
 
 - _ManagedBean_ is created for each request i.e. it has request scope whereas _@Component_ is Singleton.
 
- - In order to make @Compomnent behave with a request scope, we need to add @Scope("request"). 
+- In order to make @Compomnent behave with a request scope, we need to add @Scope("request"). 
+
+- If we want to achieve the same result in CDI context, then we need @Named and @Inject.
  
- - If we want to achieve the same result in CDI context, then we need @Named and @Inject.
+**Initialization of Beans:**
+
+**JSF Runtime:**
  
- **Initialization of Beans:**
- 
- **JSF Runtime:**
- 
- ```java
+```java
  
 @ManagedBean
 
