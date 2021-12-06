@@ -128,6 +128,7 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
 ```
 
 Please note that if the setter for the service bean is not present, the following error occurs when running the application.
+
 **Unable to create managed bean helloController. The following problems were found: - Property helloSpringService for managed bean helloController does not exist. Check that appropriate getter and/or setter methods exist.**
 
 To counter this, please create a setter method as follows:
@@ -225,15 +226,13 @@ public class HelloController {
 
 The important points in this section are as follows:
 
-- https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> this fixed the compilation problem with lombok.
+- https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC  ---> This fixed the compilation problem with lombok.
 
-- in this project, we are using _HikariCP_ connection pool to make connections to the database and _HSQLDB (HyperSQL Database)_ is used as relational database for this project.
-
-- TODO: Describe the purpose of _hikaricp_ and _hsqldb_ dependencies. 
+- In this project, we are using _HikariCP_ connection pool to make connections to the database and _HSQLDB (HyperSQL Database)_ is used as relational database for this project.
 
 - Service is created during application start-up since it is a singleton.
 
-- https://stackoverflow.com/questions/53690136/the-import-javax-annotation-postconstruct-cannot-be-resolved   ---> this explains the problem with @PostConstrcut annotation not being recognized.
+- https://stackoverflow.com/questions/53690136/the-import-javax-annotation-postconstruct-cannot-be-resolved   ---> This explains the problem with @PostConstrcut annotation not being recognized.
 
 - https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory ---> How to avoid hibernate problem with the creation of entitymanagerfactory
 
@@ -278,11 +277,14 @@ The important points in this section are as follows:
 - On the front-end side:
 - Input for **url** are captured via _value="#{checkListController.check.url}"_ in input field.
 - upon clicking **save** button via _<h:commandButton value="save" action="#{checkListController.save()}"/>_, the request is send to the back-end.
+
 - **Attention:**  By default, the form is not cleared automatically when save button is clicked. Why? Because, out of the box, the prime faces command button component sends the request to the server using **Ajax Post**. Hence, when we refresh the page, we will see the current state of the data from the database. 
 
 
 - On the back-end side:
-- A **check** object is created. **Attention:** By default, all JSF objects are initialized with null hence, we must call new operator to initialize the object.
+- A **check** object is created. 
+
+**Attention:** By default, all JSF objects are initialized with null hence, we must call new operator to initialize the object.
 - We call the **save** method in **Controller** ---> this will call the **save()** method in **Service** ---> this uses **repository** to **save** the element.
 
 ## Explanation of JSF bean scopes
@@ -303,7 +305,9 @@ The important points in this section are as follows:
 
 The important points in this section are as follows:
 
-- In order to make data from text box disappear after save button is clickwed, add _update="checkForm"_ in save button. **Attention:** This must match the **form id**.
+- In order to make data from text box disappear after save button is clickwed, add _update="checkForm"_ in save button. 
+
+**Attention:** This must match the **form id**.
 - In order to dynamically update the data table, we need to add _update="checkForm, :checkTable"_ in save button. Here, we add **,** to indicate that this is an additional component and **:** since this component is outside the form. ---> On the back-end side, in CheckListController class, we add **checks = checkService.findAll();** in **save()** method so that the data is reloaded not only at system start-up but also after save button is pressed. 
 
 ## Explanation of JSF messages and growl
@@ -382,7 +386,9 @@ Second part is:
     </p:confirmDialog>
 </h:form>
 ```
-This creates the options of _yes_ or _no_. **Attention:** This part must be written inside a HTML form. 
+This creates the options of _yes_ or _no_. 
+
+**Attention:** This part must be written inside a HTML form. 
 
 ## Explanation of PrimeFaces Dialog
 
@@ -414,7 +420,9 @@ Here, we also need to create a button which executes this prime faces modal dial
 	<p:commandButton value="add check" oncomplete="PF('checkDialog').show()" />
 </h:form>
 ```
-Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is executed once a Ajax request is send and response is acquired. **Attention:** _checkDialog_ passed an argument to PF() must be same as widgetVar in _p:dialog widgetVar="checkDialog"_.
+Here, the important part is _oncomplete="PF('checkDialog').show()"_ which is executed once a Ajax request is send and response is acquired. 
+
+**Attention:** _checkDialog_ passed an argument to PF() must be same as widgetVar in _p:dialog widgetVar="checkDialog"_.
 
 - In order to make edit button also open the modal dialog, we added _oncomplete="PF('checkDialog').show()"_ to the edit button. 
 
@@ -477,6 +485,9 @@ Current:
 - [3](https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=ebb3a): PrimeFaces showcase
 - [4](https://zetcode.com/articles/hikaricp/): Using HikariCP connection pool 
 - [5](http://hsqldb.org/web/hsqlDocsFrame.html): HyperSQL Documentation
+- [6](https://vocado.tistory.com/entry/javalangExceptionInInitializerError-comsuntoolsjavaccodeTypeTags-%EC%97%90%EB%9F%AC):  This fixed the compilation problem with lombok.
+- [7](https://stackoverflow.com/questions/53690136/the-import-javax-annotation-postconstruct-cannot-be-resolved): This explains the problem with @PostConstrcut annotation not being recognized. **(Stack Overflow)**
+- [8](https://stackoverflow.com/questions/6054692/error-creating-bean-sessionfactory): How to avoid hibernate problem with the creation of entitymanagerfactory
 
 ## Contact Information
 
