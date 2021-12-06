@@ -436,13 +436,12 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 ## Technologies Used
 
 - Java 11
-- PrimeFaces
+- [PrimeFaces](https://www.primefaces.org/): PrimeFaces is a popular open source framework for JavaServer Faces featuring over 100 components, touch optimized mobilekit, client side validation, theme engine and more. 
 - [SpringBoot](https://start.spring.io/): Used to create easy stand-alone, production-grade Spring based Applications.
 - [Maven](https://maven.apache.org/): Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 - [HikariCP](https://zetcode.com/articles/hikaricp/): HikariCP is solid high-performance JDBC connection pool. A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools may significantly reduce the overall resource usage. 
 - [HSQLDB](http://hsqldb.org/web/hsqlDocsFrame.html): HSQLDB (Hyper SQL Database) is a relational database management system written in Java. It has a JDBC driver and supports a large subset of SQL-92, SQL:2008, SQL:2011, and SQL:2016 standards. It offers a fast, small (around 1300 kilobytes in version 2.2) database engine which offers both in-memory and disk-based tables. Both embedded and server modes are available. 
 
-- Give a brief explanation of each technology.
 
 ## Prerequisities
 
