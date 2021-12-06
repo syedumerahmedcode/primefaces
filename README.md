@@ -449,7 +449,20 @@ We call the clear() method from the controller in _action_, we call _update=":ch
 
 ## Commands
 
-- To be defined.
+- To run the project, navigate to the project folder(where pom.xml is located) and execute the following command: 
+
+```bash
+mvn jetty:run
+```
+
+Once the project is build successfully, please navigate to the following link:
+
+```html
+http://localhost:8080/
+```
+
+Here, one can see a default data set(containing 3 entries) already located from the database which is loaded to the GUI on application startup using _@PostConstruct_. Here, one can perform all CRUD(Create, Read, Update and Delete) operations.  
+ 
 
 
 ## Contribution
